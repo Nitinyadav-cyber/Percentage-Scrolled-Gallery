@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll Progress Bar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <h2>Wallpaper-Gallery</h2><br>
+        <img src="img1.jpg" width="1080" height="720">
+        <img src="img2.jpg" width="1080" height="720">
+        <img src="img3.jpg" width="1080" height="720">
+        <img src="img4.jpg" width="1080" height="720">
+        <img src="img5.jpg" width="1080" height="720">
+        <img src="img6.jpg" width="1080" height="720">
+        <img src="img7.jpg" width="1080" height="720">
+        <img src="img8.jpg" width="1080" height="720">
+        <img src="img9.jpg" width="1080" height="720">
+        <img src="img10.jpg" width="1080" height="720">
+        <img src="img11.jpg" width="1080" height="720">
+        <img src="img12.jpg" width="1080" height="720">
+
+
+    </section>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div id="percent"></div>
+    <script type="text/javascript">
+
+    var percent= document.getElementById("progressbar");
+    var percent= document.getElementById("percent");
+    var totalHeight=document.body.scrollHeight - window.innerHeight;
+
+    window.onscroll=function(){
+        var Progress=(window.pageYOffset/totalHeight)*100;
+        progressbar.style.height=Progress + "%";
+        percent.innerHTML=Math.round(Progress) + "%" + " viewed"
+    }
+    </script>
+</body>
+</html>
